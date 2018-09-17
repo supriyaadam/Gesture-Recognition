@@ -1,0 +1,1615 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Visualization of Raw Data </title>
+    <h1 align="center">Visualization of Raw Data</h1>
+    <em> Line Plot Graphs of raw data taken from the training set (.mp4 videos) are plotted.</em>
+    <em> We have used five videos to train our system.</em>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="myDiv_emg"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('EMG750.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#1f77b4',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'EMG'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data1 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_emg', data1, layout);
+
+
+            });
+
+
+        </script>
+    <div id="myDiv_imu"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('IMU750.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#8AFF33',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'IMU'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace9 = {
+                x: unpack(rows, '9'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace10 = {
+                x: unpack(rows, '10'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data2 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_imu', data2, layout);
+
+
+            });
+
+
+        </script>
+
+    <div id="myDiv_EMG489"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('EMG489.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#1f77b4',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'EMG'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data1 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_EMG489', data1, layout);
+
+
+            });
+
+
+        </script>
+    <div id="myDiv_IMU489"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('IMU489.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#8AFF33',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'IMU'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace9 = {
+                x: unpack(rows, '9'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace10 = {
+                x: unpack(rows, '10'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data2 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_IMU489', data2, layout);
+
+
+            });
+
+
+        </script>
+
+    <div id="myDiv_emg154"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('emg154.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#1f77b4',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'EMG'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data1 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_emg154', data1, layout);
+
+
+            });
+
+
+        </script>
+    <div id="myDiv_imu154"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('imu154.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#8AFF33',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'IMU'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace9 = {
+                x: unpack(rows, '9'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace10 = {
+                x: unpack(rows, '10'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data2 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_imu154', data2, layout);
+
+
+            });
+
+
+        </script>
+
+    <div id="myDiv_emg420"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('emg420.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#1f77b4',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'EMG'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data1 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_emg420', data1, layout);
+
+
+            });
+
+
+        </script>
+    <div id="myDiv_imu420"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('imu420.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#8AFF33',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'IMU'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace9 = {
+                x: unpack(rows, '9'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace10 = {
+                x: unpack(rows, '10'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data2 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_imu420', data2, layout);
+
+
+            });
+
+
+        </script>
+
+    <div id="myDiv_emg443"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('emg443.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#1f77b4',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'EMG'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#1f77b4',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data1 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+                };
+                Plotly.newPlot('myDiv_emg443', data1, layout);
+
+
+            });
+
+
+        </script>
+    <div id="myDiv_imu443"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        Plotly.d3.csv('imu443.csv', function(err, rows){
+                function unpack(rows, key1) {
+                    return rows.map(function(row)
+                    { return row[key1]; });
+                }
+
+                var trace1 = {
+                    x: unpack(rows, '1'),
+                   mode: 'lines',
+
+                    line: {
+                        color: '#8AFF33',
+                        width: 1
+                    },
+                    type: 'scatter',
+                    name:'IMU'
+
+                };
+
+                var trace2 = {
+                x: unpack(rows, '2'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace3 = {
+                x: unpack(rows, '3'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace4 = {
+                x: unpack(rows, '4'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace5 = {
+                x: unpack(rows, '5'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace6 = {
+                x: unpack(rows, '6'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+             var trace7 = {
+                x: unpack(rows, '7'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+
+             var trace8 = {
+                x: unpack(rows, '8'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace9 = {
+                x: unpack(rows, '9'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+            var trace10 = {
+                x: unpack(rows, '10'),
+
+                mode: 'lines',
+
+                line: {
+                    color: '#8AFF33',
+                    width: 1
+                },
+                type: 'scatter',
+                 name:''
+
+            };
+
+                var data2 = [trace1,trace2, trace3, trace4, trace5, trace6, trace7, trace8, trace9, trace10];
+
+                var layout = {
+                    title: 'Line Plot',
+                    autosize: true,
+                    width: 300,
+                    height: 300,
+                    margin: {
+                        l: 0,
+                        r: 0,
+                        b: 0,
+                        t: 65
+                    }
+
+
+
+                };
+                Plotly.newPlot('myDiv_imu443', data2, layout);
+
+
+            });
+
+
+        </script>
+</body>
+</html>
